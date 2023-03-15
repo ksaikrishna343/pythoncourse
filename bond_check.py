@@ -2,7 +2,6 @@
 
 import sys
 import re
-import pathlib
 
 try:
     file = open('/proc/net/bonding/bond0', 'r')
