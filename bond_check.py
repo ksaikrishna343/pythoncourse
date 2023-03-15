@@ -4,13 +4,11 @@ import sys
 import re
 import pathlib
 
-file = pathlib.Path("/proc/net/bonding/bond0")
-
-if file.is_file():
-    print ("Bond File exist")
-else:
-    print ("Bond File does not exist")
-     sys.exit()
+try:
+    file = open('/proc/net/bonding/bond0', 'r')
+except IOError:
+    print('Bonding file doesnot exist!')
+    sys.exit()
         
 def usage():
         print('''USAGE: %s [options] [bond_interface]
