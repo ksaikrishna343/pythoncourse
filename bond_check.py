@@ -10,7 +10,7 @@ if file.is_file():
     print ("Bond File exist")
 else:
     print ("Bond File does not exist")
-     sys.exit(1)
+     sys.exit()
         
 def usage():
         print('''USAGE: %s [options] [bond_interface]
